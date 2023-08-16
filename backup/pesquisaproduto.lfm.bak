@@ -1,0 +1,43 @@
+inherited PesquisaProdF: TPesquisaProdF
+  Left = 899
+  Height = 240
+  Top = 132
+  Width = 320
+  Caption = 'Pesquisa de Produtos'
+  ClientHeight = 0
+  ClientWidth = 0
+  inherited paneltopcat: TPanel
+    Width = 0
+    ClientWidth = 0
+    inherited btnPesq: TBitBtn
+      Left = 432
+      OnClick = btnPesqClick
+    end
+  end
+  inherited panelleftcat: TPanel
+    Height = 0
+    Top = 0
+  end
+  inherited panelrightcat: TPanel
+    Left = -170
+    Height = 0
+    Top = 0
+  end
+  inherited panelbottomcat: TPanel
+    Top = -50
+    Width = 0
+  end
+  inherited DBGrid1: TDBGrid
+    Left = 0
+    Height = 0
+    Top = 0
+    Width = 0
+    DataSource = dsPesqProd
+    OnDblClick = DBGrid1DblClick
+  end
+  object dsPesqProd: TDataSource[5]
+    DataSet = DataModuleF.qryProduto
+    Left = 1816
+    Top = 248
+  end
+end

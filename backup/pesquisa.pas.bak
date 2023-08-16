@@ -1,0 +1,51 @@
+unit pesquisa;
+
+{$mode ObjFPC}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, DBGrids,
+  StdCtrls, Buttons, DataModule, cadProdutos, cadcategoria;
+
+type
+
+  { TFormPesquisaPadraoF }
+
+  TFormPesquisaPadraoF = class(TForm)
+    btnPesq: TBitBtn;
+    DBGrid1: TDBGrid;
+    edtReferencia: TEdit;
+    labReferencia: TLabel;
+    paneltopcat: TPanel;
+    panelleftcat: TPanel;
+    panelrightcat: TPanel;
+    panelbottomcat: TPanel;
+    procedure DBGrid1DblClick(Sender: TObject);
+  private
+
+  public
+
+  end;
+
+var
+  FormPesquisaPadraoF: TFormPesquisaPadraoF;
+
+implementation
+
+{$R *.lfm}
+
+{ TFormPesquisaPadraoF }
+
+procedure TFormPesquisaPadraoF.btnPesqClick(Sender: TObject);
+
+
+end;
+
+procedure TFormPesquisaPadraoF.DBGrid1DblClick(Sender: TObject);
+begin
+
+end;
+
+end.
+

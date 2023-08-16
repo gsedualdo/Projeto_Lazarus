@@ -1,0 +1,135 @@
+object DataModuleF: TDataModuleF
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 388
+  HorizontalOffset = 1238
+  VerticalOffset = 86
+  Width = 250
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    AfterConnect = ZConnection1AfterConnect
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'postgres'
+    User = 'postgres'
+    Password = '1234'
+    Protocol = 'postgresql'
+    Left = 48
+    Top = 16
+  end
+  object qryCategoria: TZQuery
+    Connection = ZConnection1
+    UpdateObject = updCategoria
+    Active = True
+    SQL.Strings = (
+      'select'
+      'CATEGORIAPRODUTOID, '
+      'DS_CATEGORIA_PRODUTO'
+      'from CATEGORIA_PRODUTO'
+    )
+    Params = <>
+    Left = 48
+    Top = 144
+  end
+  object updCategoria: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 128
+    Top = 144
+  end
+  object qryProduto: TZQuery
+    Connection = ZConnection1
+    UpdateObject = updProduto
+    Active = True
+    SQL.Strings = (
+      'select '
+      'PRODUTOID, '
+      'CATEGORIAPRODUTOID, '
+      'DS_PRODUTO,'
+      'OBS_PRODUTO,'
+      'VL_VENDA_PRODUTO,'
+      'DT_CADASTRO_PRODUTO,'
+      'STATUS_PRODUTO'
+      'from PRODUTO'
+    )
+    Params = <>
+    Left = 48
+    Top = 208
+  end
+  object updProduto: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 128
+    Top = 208
+  end
+  object qryCliente: TZQuery
+    Connection = ZConnection1
+    UpdateObject = updCliente
+    Active = True
+    SQL.Strings = (
+      'select'
+      'CLIENTEID, '
+      'TIPO_CLIENTE, '
+      'CPF_CNPJ_CLIENTE, '
+      'NOME_CLIENTE'
+      'from CLIENTE '
+    )
+    Params = <>
+    Left = 48
+    Top = 272
+  end
+  object updCliente: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 128
+    Top = 272
+  end
+  object qryModelo: TZQuery
+    Connection = ZConnection1
+    UpdateObject = updModelo
+    Active = True
+    SQL.Strings = (
+      'select '
+      'PRODUTOID, '
+      'CATEGORIAPRODUTOID, '
+      'DS_PRODUTO,'
+      'OBS_PRODUTO,'
+      'VL_VENDA_PRODUTO,'
+      'DT_CADASTRO_PRODUTO,'
+      'STATUS_PRODUTO'
+      'from PRODUTO'
+    )
+    Params = <>
+    Left = 48
+    Top = 88
+  end
+  object updModelo: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 128
+    Top = 88
+  end
+  object qryOrcamento: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select'
+      'ORCAMENTOID, '
+      'CLIENTEID, '
+      'DT_ORCAMENTO, '
+      'DT_VALIDADE_ORCAMENTO, '
+      'VL_TOTAL_ORCAMENTO'
+      'from ORCAMENTO '
+    )
+    Params = <>
+    Left = 48
+    Top = 336
+  end
+  object updOrcamento: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    Left = 128
+    Top = 336
+  end
+end

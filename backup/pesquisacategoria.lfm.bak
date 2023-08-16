@@ -1,0 +1,7 @@
+inherited PesquisaCatF: TPesquisaCatF
+  Caption = 'Pesquisa Categorias'
+  object dsPesqCat: TDataSource[5]
+    Left = 1800
+    Top = 240
+  end
+end

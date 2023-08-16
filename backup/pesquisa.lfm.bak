@@ -1,0 +1,94 @@
+object FormPesquisaPadraoF: TFormPesquisaPadraoF
+  Left = -8
+  Height = 1017
+  Top = -8
+  Width = 1920
+  Caption = 'Pesquisa'
+  ClientHeight = 1017
+  ClientWidth = 1920
+  LCLVersion = '2.2.6.0'
+  object paneltopcat: TPanel
+    Left = 0
+    Height = 80
+    Top = 0
+    Width = 1920
+    Align = alTop
+    ClientHeight = 80
+    ClientWidth = 1920
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 0
+    object edtReferencia: TEdit
+      Left = 344
+      Height = 23
+      Top = 32
+      Width = 32
+      TabOrder = 0
+    end
+    object btnPesq: TBitBtn
+      Left = 408
+      Height = 30
+      Top = 32
+      Width = 75
+      Caption = 'Pesquisar'
+      TabOrder = 1
+    end
+    object labReferencia: TLabel
+      Left = 232
+      Height = 21
+      Top = 32
+      Width = 110
+      Caption = 'Referência:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -16
+      Font.Name = 'Cascadia Code ExtraLight'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object panelleftcat: TPanel
+    Left = 0
+    Height = 887
+    Top = 80
+    Width = 138
+    Align = alLeft
+    Caption = 'panelleftcat'
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 1
+  end
+  object panelrightcat: TPanel
+    Left = 1750
+    Height = 887
+    Top = 80
+    Width = 170
+    Align = alRight
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 2
+  end
+  object panelbottomcat: TPanel
+    Left = 0
+    Height = 50
+    Top = 967
+    Width = 1920
+    Align = alBottom
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 3
+  end
+  object DBGrid1: TDBGrid
+    Left = 138
+    Height = 887
+    Top = 80
+    Width = 1612
+    Align = alClient
+    Color = clWindow
+    Columns = <>
+    TabOrder = 4
+    OnDblClick = DBGrid1DblClick
+  end
+end

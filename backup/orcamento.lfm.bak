@@ -1,0 +1,275 @@
+inherited orcamentoF: TorcamentoF
+  Left = 662
+  Height = 495
+  Top = 132
+  Width = 814
+  Caption = 'Orçamentos'
+  ClientHeight = 495
+  ClientWidth = 814
+  inherited PageControl1: TPageControl
+    Height = 495
+    Width = 814
+    inherited TelaConsulta: TTabSheet
+      ClientHeight = 467
+      ClientWidth = 806
+      inherited DBGrid1: TDBGrid
+        Height = 367
+        Width = 631
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'orcamentoid'
+            FieldName = 'orcamentoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'clienteid'
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_orcamento'
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_validade_orcamento'
+            Width = 150
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'vl_total_orcamento'
+            Width = 150
+            FieldName = 'vl_total_orcamento'
+          end>
+        DataSource = dsOrcamento
+      end
+      inherited PanelTop: TPanel
+        Width = 806
+        ClientWidth = 806
+        inherited btnPesquisar: TBitBtn
+          OnClick = btnPesquisarClick
+        end
+        object edtRefOrc: TEdit[2]
+          Left = 208
+          Height = 23
+          Top = 16
+          Width = 32
+          TabOrder = 1
+        end
+      end
+      inherited PanelBottom: TPanel
+        Top = 417
+        Width = 806
+        ClientWidth = 806
+        inherited btnNovo: TBitBtn
+          Left = 104
+          OnClick = btnNovoClick
+        end
+        inherited btnFechar: TBitBtn
+          Left = 464
+          OnClick = btnFecharClick
+        end
+      end
+      inherited panelleft1: TPanel
+        Height = 367
+      end
+      inherited panelright1: TPanel
+        Left = 729
+        Height = 367
+      end
+    end
+    inherited TelaCadastro: TTabSheet
+      ClientHeight = 467
+      ClientWidth = 806
+      inherited PanelBottomCad: TPanel
+        Top = 417
+        Width = 806
+        ClientWidth = 806
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          OnClick = btnCancelarClick
+        end
+      end
+      inherited panelleft2: TPanel
+        Height = 367
+        Width = 136
+        ClientHeight = 367
+        ClientWidth = 136
+        inherited btnEditar: TBitBtn
+          OnClick = btnEditarClick
+        end
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+      end
+      inherited panelright2: TPanel
+        Left = 676
+        Height = 367
+      end
+      inherited paneltop2: TPanel
+        Width = 806
+      end
+      inherited panelcenter: TPanel
+        Left = 352
+        Color = clGray
+        ParentColor = False
+        object labIDCliente: TLabel[0]
+          Left = 232
+          Height = 22
+          Top = 72
+          Width = 113
+          Caption = 'ID do Cliente:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labIDOrc: TLabel[1]
+          Left = 432
+          Height = 22
+          Top = 72
+          Width = 148
+          Caption = 'ID do Orçamento:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labData: TLabel[2]
+          Left = 176
+          Height = 22
+          Top = 146
+          Width = 169
+          Caption = 'Data do Orçamento:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labDataVal: TLabel[3]
+          Left = 197
+          Height = 22
+          Top = 216
+          Width = 148
+          Caption = 'Data de Validade:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtIDCliente: TDBEdit[4]
+          Left = 352
+          Height = 23
+          Top = 71
+          Width = 24
+          DataField = 'clienteid'
+          DataSource = dsOrcamento
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object edtIDOrc: TDBEdit[5]
+          Left = 584
+          Height = 23
+          Top = 72
+          Width = 24
+          DataField = 'orcamentoid'
+          DataSource = dsOrcamento
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 1
+        end
+        object edtValor: TDBEdit[6]
+          Left = 352
+          Height = 23
+          Top = 287
+          Width = 80
+          DataField = 'vl_total_orcamento'
+          DataSource = dsOrcamento
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 2
+        end
+        object labValor: TLabel[7]
+          Left = 249
+          Height = 22
+          Top = 288
+          Width = 96
+          Caption = 'Valor Total:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtData: TDBDateEdit[8]
+          Left = 352
+          Height = 23
+          Top = 145
+          Width = 103
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doNone
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 0
+          TabOrder = 3
+          Text = '18/02/2023'
+          DataField = 'dt_orcamento'
+          DataSource = dsOrcamento
+        end
+        object edtDataVal: TDBDateEdit[9]
+          Left = 352
+          Height = 23
+          Top = 215
+          Width = 103
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doNone
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 0
+          TabOrder = 4
+          Text = '19/02/2023'
+          DataField = 'dt_validade_orcamento'
+          DataSource = dsOrcamento
+        end
+      end
+      object labTitulo: TLabel[5]
+        Left = 840
+        Height = 39
+        Top = 112
+        Width = 159
+        Caption = 'Orçamentos'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -32
+        Font.Name = 'Impact'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object dsOrcamento: TDataSource[1]
+    DataSet = DataModuleF.qryOrcamento
+    Left = 1864
+    Top = 152
+  end
+end

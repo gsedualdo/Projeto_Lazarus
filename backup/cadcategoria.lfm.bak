@@ -1,0 +1,147 @@
+inherited CadCategoriaF: TCadCategoriaF
+  Left = 856
+  Top = 196
+  Caption = 'Cadastro de Categorias'
+  inherited PageControl1: TPageControl
+    inherited TelaConsulta: TTabSheet
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'categoriaprodutoid'
+            Width = 150
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ds_categoria_produto'
+            Width = 150
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = dsCategoria
+      end
+      inherited PanelTop: TPanel
+        inherited btnPesquisar: TBitBtn
+          OnClick = btnPesquisarClick
+        end
+        object edtRefCat: TEdit[2]
+          Left = 208
+          Height = 23
+          Top = 15
+          Width = 24
+          TabOrder = 1
+        end
+      end
+      inherited PanelBottom: TPanel
+        inherited btnNovo: TBitBtn
+          OnClick = btnNovoClick
+        end
+        inherited btnFechar: TBitBtn
+          OnClick = btnFecharClick
+        end
+      end
+    end
+    inherited TelaCadastro: TTabSheet
+      inherited PanelBottomCad: TPanel
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          OnClick = btnCancelarClick
+        end
+      end
+      inherited panelleft2: TPanel
+        Height = 458
+        Top = 56
+        Width = 130
+        ClientHeight = 458
+        ClientWidth = 130
+        inherited btnEditar: TBitBtn
+          OnClick = btnEditarClick
+        end
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+      end
+      inherited panelright2: TPanel
+        Height = 458
+        Top = 56
+      end
+      inherited paneltop2: TPanel
+        Height = 56
+      end
+      inherited panelcenter: TPanel
+        Color = clGray
+        ParentColor = False
+        object labID: TLabel[0]
+          Left = 336
+          Height = 28
+          Top = 101
+          Width = 28
+          Caption = 'ID:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -24
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labDesc: TLabel[1]
+          Left = 257
+          Height = 28
+          Top = 160
+          Width = 107
+          Caption = 'Descrição:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -24
+          Font.Name = 'Gadugi'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtID: TDBEdit[2]
+          Left = 376
+          Height = 23
+          Top = 101
+          Width = 48
+          DataField = 'categoriaprodutoid'
+          DataSource = dsCategoria
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object edtDesc: TDBEdit[3]
+          Left = 376
+          Height = 23
+          Top = 165
+          Width = 144
+          DataField = 'ds_categoria_produto'
+          DataSource = dsCategoria
+          MaxLength = 50
+          TabOrder = 1
+        end
+      end
+      object labTitulo: TLabel[5]
+        Left = 744
+        Height = 39
+        Top = 128
+        Width = 307
+        Caption = 'Cadastro de Categorias'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -32
+        Font.Name = 'Impact'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object dsCategoria: TDataSource[1]
+    DataSet = DataModuleF.qryCategoria
+    Left = 1864
+    Top = 232
+  end
+end

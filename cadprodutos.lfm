@@ -1,0 +1,347 @@
+inherited CadProdutosF: TCadProdutosF
+  Left = -8
+  Height = 1017
+  Top = -8
+  Width = 1920
+  Caption = 'Cadastro de Produtos'
+  ClientHeight = 0
+  ClientWidth = 0
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 1017
+    Width = 1920
+    inherited TelaConsulta: TTabSheet
+      ClientHeight = 989
+      ClientWidth = 1912
+      inherited DBGrid1: TDBGrid
+        Height = 889
+        Width = 1737
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'produtoid'
+            FieldName = 'produtoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'categoriaprodutoid'
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ds_produto'
+            Width = 140
+            FieldName = 'ds_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'obs_produto'
+            Width = 140
+            FieldName = 'obs_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'vl_venda_produto'
+            FieldName = 'vl_venda_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_cadastro_produto'
+            FieldName = 'dt_cadastro_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'status_produto'
+            FieldName = 'status_produto'
+          end>
+        DataSource = dsProduto
+        OnDblClick = DBGrid1DblClick
+      end
+      inherited PanelTop: TPanel
+        Width = 1912
+        ClientWidth = 1912
+        inherited btnPesquisar: TBitBtn
+          OnClick = btnPesquisarClick
+        end
+        inherited edtRefM: TEdit
+          TabOrder = 2
+        end
+        object edtRefProd: TEdit[3]
+          Left = 208
+          Height = 23
+          Top = 16
+          Width = 32
+          TabOrder = 1
+        end
+      end
+      inherited PanelBottom: TPanel
+        Top = 939
+        Width = 1912
+        ClientWidth = 1912
+        inherited btnNovo: TBitBtn
+          Left = 112
+          OnClick = btnNovoClick
+        end
+        inherited btnFechar: TBitBtn
+          Left = 528
+          OnClick = btnFecharClick
+        end
+      end
+      inherited panelleft1: TPanel
+        Height = 889
+      end
+      inherited panelright1: TPanel
+        Left = 1835
+        Height = 889
+      end
+    end
+    inherited TelaCadastro: TTabSheet
+      ClientHeight = 989
+      ClientWidth = 1912
+      inherited PanelBottomCad: TPanel
+        Top = 939
+        Width = 1912
+        ClientWidth = 1912
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          OnClick = btnCancelarClick
+        end
+      end
+      inherited panelleft2: TPanel
+        Height = 883
+        Top = 56
+        Width = 128
+        ClientHeight = 883
+        ClientWidth = 128
+        inherited btnEditar: TBitBtn
+          OnClick = btnEditarClick
+        end
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+      end
+      inherited panelright2: TPanel
+        Left = 1782
+        Height = 883
+        Top = 56
+      end
+      inherited paneltop2: TPanel
+        Height = 56
+        Width = 1912
+      end
+      inherited panelcenter: TPanel
+        Left = 248
+        Top = 232
+        Width = 1392
+        ClientWidth = 1392
+        Color = 8947848
+        ParentColor = False
+        object labCategoria: TLabel[0]
+          Left = 458
+          Height = 22
+          Top = 106
+          Width = 205
+          Caption = 'Categoria do Produto:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labStatus: TLabel[1]
+          Left = 1096
+          Height = 22
+          Top = 105
+          Width = 64
+          Caption = 'Status:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labValor: TLabel[2]
+          Left = 192
+          Height = 22
+          Top = 282
+          Width = 146
+          Caption = 'Valor de Venda:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labObs: TLabel[3]
+          Left = 214
+          Height = 22
+          Top = 233
+          Width = 124
+          Caption = 'Observações:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labDesc: TLabel[4]
+          Left = 242
+          Height = 22
+          Top = 186
+          Width = 96
+          Caption = 'Descrição:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object labID: TLabel[5]
+          Left = 202
+          Height = 22
+          Top = 106
+          Width = 136
+          Caption = 'ID do Produto:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object edtValor: TDBEdit[6]
+          Left = 346
+          Height = 23
+          Top = 282
+          Width = 64
+          DataField = 'vl_venda_produto'
+          DataSource = dsProduto
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object edtObs: TDBEdit[7]
+          Left = 346
+          Height = 23
+          Top = 233
+          Width = 368
+          DataField = 'obs_produto'
+          DataSource = dsProduto
+          MaxLength = 300
+          TabOrder = 1
+        end
+        object edtDesc: TDBEdit[8]
+          Left = 344
+          Height = 23
+          Top = 184
+          Width = 368
+          DataField = 'ds_produto'
+          DataSource = dsProduto
+          MaxLength = 50
+          TabOrder = 2
+        end
+        object edtStatus: TDBEdit[9]
+          Left = 1168
+          Height = 23
+          Top = 104
+          Width = 64
+          DataField = 'status_produto'
+          DataSource = dsProduto
+          MaxLength = 10
+          TabOrder = 3
+        end
+        object edtCategoria: TDBEdit[10]
+          Left = 674
+          Height = 23
+          Top = 105
+          Width = 48
+          DataField = 'categoriaprodutoid'
+          DataSource = dsProduto
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 4
+        end
+        object edtID: TDBEdit[11]
+          Left = 346
+          Height = 23
+          Top = 106
+          Width = 40
+          DataField = 'produtoid'
+          DataSource = dsProduto
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 5
+        end
+        object edtData: TDBDateEdit[12]
+          Left = 962
+          Height = 23
+          Top = 104
+          Width = 103
+          CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+          DateOrder = doNone
+          ButtonWidth = 23
+          NumGlyphs = 1
+          MaxLength = 0
+          TabOrder = 6
+          Text = '18/02/2023'
+          DataField = 'dt_cadastro_produto'
+          DataSource = dsProduto
+        end
+        object labData: TLabel[13]
+          Left = 786
+          Height = 22
+          Top = 105
+          Width = 165
+          Caption = 'Data de Cadastro:'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -19
+          Font.Name = 'Lucida Sans'
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label9: TLabel[14]
+          Left = 782
+          Height = 1
+          Top = 242
+          Width = 1
+          ParentColor = False
+        end
+      end
+      object labTitulo: TLabel[5]
+        Left = 776
+        Height = 34
+        Top = 136
+        Width = 241
+        Caption = 'Cadastro de Produtos'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -27
+        Font.Name = 'Impact'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object dsProduto: TDataSource[1]
+    DataSet = DataModuleF.qryProduto
+    Left = 1864
+    Top = 208
+  end
+end
